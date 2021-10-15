@@ -1,0 +1,148 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    @media (min-width: $breakpoint-l) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    &__logo {
+        img {
+            max-width: 135px;
+            width: 100%;
+        }
+
+        @media (min-width: $breakpoint-l) {
+            img {
+                max-width: 185px;
+            }
+        }
+    }
+
+    &__nav {
+        opacity: 0;
+        z-index: -1;
+        position: absolute;
+
+        &.open-menu {
+            padding-top: 50px;
+            opacity: 1;
+            z-index: 0;
+            top: 100px;
+            min-height: 100vh;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            padding-left: 0;
+            ul {
+                padding-left: 0;
+            }
+            li {
+                margin-bottom: 40px;
+                font-size: 20px;
+                font-weight: 700;
+
+                a {
+                    color: $white;
+                }
+            }
+
+            @media (min-width: $breakpoint-l) {
+                opacity: 0;
+                z-index: -1;
+                min-height: 0;
+            }
+        }
+
+        @media (min-width: $breakpoint-l) {
+            opacity: 1;
+            z-index: 0;
+            position: initial;
+
+            ul {
+                display: flex;
+                li:last-of-type {
+                    a {
+                        font-weight: 600;
+                        font-size: 20px;
+                        opacity: 100%;
+                    }
+                }
+            }
+
+            a {
+                color: $white;
+                font-weight: 300;
+                font-size: 18px;
+                opacity: 60%;
+                margin-left: 40px;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .is-active {
+                font-weight: 700;
+                opacity: 80%;
+            }
+        }
+    }
+
+    .burger-menu {
+        border: 0;
+        background-color: transparent;
+        padding: 15px 6px;
+
+        &.open-menu span {
+            transition: 0.5s;
+            background-color: transparent;
+            &::before {
+                transform: rotate(38deg);
+                top: 0px;
+                transition: 0.4s;
+            }
+            &::after {
+                transform: rotate(-38deg);
+                bottom: 0px;
+                transition: 0.4s;
+            }
+        }
+
+        span {
+            display: block;
+            width: 30px;
+            background-color: $white;
+            height: 3px;
+            border-radius: 40px;
+            position: relative;
+            &::before {
+                position: absolute;
+                content: "";
+                width: 30px;
+                background-color: $white;
+                height: 3px;
+                top: 10px;
+                left: 6px;
+            }
+            &::after {
+                position: absolute;
+                content: "";
+                width: 30px;
+                background-color: $white;
+                height: 3px;
+                bottom: 10px;
+                left: 6px;
+            }
+        }
+
+        @media (min-width: $breakpoint-l) {
+            position: absolute;
+            opacity: 0;
+            z-index: -1;
+        }
+    }
+}

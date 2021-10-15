@@ -1,1 +1,5 @@
-@import "_base/_general";
+@import "./normalize.scss";
+@import "_base/general";
+@import "_base/variables";
+@import "_base/header";
+@import "_base/banner";
