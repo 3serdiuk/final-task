@@ -17,9 +17,11 @@
     }
     &__contact {
         max-width: 455px;
-        margin-right: 10px;
         width: 100%;
         padding-bottom: 50px;
+        @media (min-width: 972px) {
+            margin-right: 10px;
+        }
 
         @media (min-width: 1110px) {
             padding-bottom: 0;
