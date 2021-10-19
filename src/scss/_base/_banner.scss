@@ -1,17 +1,23 @@
 .banner {
-    display: flex;
+    @extend %fl-col;
     justify-content: space-between;
     padding-top: 40px;
+    @media (min-width: $breakpoint-l) {
+        flex-direction: row;
+    }
 
     &__text {
         @extend %fl-col;
         max-width: 725px;
         width: 100%;
         h1 {
-            font-size: 42px;
+            font-size: 32px;
             line-height: 57px;
             color: $white;
             margin-bottom: 20px;
+            @media (min-width: $breakpoint-m) {
+                font-size: 42px;
+            }
             img {
                 max-width: 455px;
                 width: 100%;
@@ -66,12 +72,15 @@
             text-transform: lowercase;
             font-family: $montserrat;
             font-weight: 300;
-            font-size: 24px;
+            font-size: 20px;
             line-height: 152%;
             color: $white;
             opacity: 60%;
             padding-top: 40px;
             padding-bottom: 75px;
+            @media (min-width: $breakpoint-m) {
+                font-size: 24px;
+            }
         }
     }
 
@@ -83,10 +92,14 @@
     }
 
     &__img {
+        text-align: center;
         img {
             max-width: 780px;
             width: 100%;
             z-index: -1;
+        }
+        @media (min-width: $breakpoint-l) {
+            text-align: initial;
         }
     }
 }
