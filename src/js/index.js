@@ -14,3 +14,15 @@ $(".burger-menu").click(function () {
     console.log($(".burger-menu"));
     $("body").toggleClass("open-menu");
 });
+
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
