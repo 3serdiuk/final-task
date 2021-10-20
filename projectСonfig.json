@@ -17,6 +17,9 @@
             ],
             "font": [
                 "/fonts/**/*.*"
+            ],
+            "assets": [
+                "/assets/**/*.*"
             ]
         },
         "dist": {
@@ -25,7 +28,8 @@
             "style": "/css/",
             "script": "/js/",
             "image": "/images/",
-            "font": "/fonts/"
+            "font": "/fonts/",
+            "assets": "/assets/"
         }
     }
 }

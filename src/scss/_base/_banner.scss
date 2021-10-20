@@ -5,6 +5,9 @@
     padding-bottom: 0;
     @media (min-width: $breakpoint-l) {
         flex-direction: row;
+        padding-bottom: 155px;
+    }
+    @media (min-width: 1150px) {
         padding-bottom: 115px;
     }
 

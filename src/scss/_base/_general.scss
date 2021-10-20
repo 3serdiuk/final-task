@@ -51,3 +51,8 @@ a, button {
   display: flex;
   flex-direction: column;
 }
+
+%fl-col-rev {
+  display: flex;
+  flex-direction: column-reverse;
+}
