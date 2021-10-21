@@ -97,11 +97,13 @@
     }
 
     &__img {
+        display: flex;
+        align-items: center;
         text-align: center;
+        justify-content: center;
         img {
             max-width: 780px;
             width: 100%;
-            z-index: -1;
         }
         @media (min-width: $breakpoint-l) {
             text-align: initial;
