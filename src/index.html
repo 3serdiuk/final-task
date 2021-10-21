@@ -46,22 +46,31 @@
       <div class="offers container">
         <div class="offers__description">
           <div class="offers__description_text">
-            <div>
+            <p>
               Если Вы хотите вывести бизнес на рынок, сделать качественный ребрендинг, оптимизировать работу ресурса,
               создать бизнес с нуля или просто получить дополнительные конкурентные преимущества,
               <span>тогда нам по пути.</span>
-            </div>
+            </p>
+            
+            <div class="offers__description_btn">
+              <h2>Что мы вам предлагаем? </h2>
 
-            <h2>Что мы вам предлагаем? </h2>
+              <div class="slider-btn">
+                <div class="swiper-button-prev">
+                  <i class="fas fa-arrow-left"></i>
+                </div>
+
+                <div class="swiper-button-next">
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="offers__description_img">
             <img src="./images/hardware.png" alt="hardware">
           </div>
         </div>
-
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
 
         <div class="swiper">
           <div class="swiper-wrapper">
@@ -214,8 +223,6 @@
 
   {% include "templates/_base/_footer.html" %}
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="./js/menu.js"></script>
   <script src="./js/index.min.js"></script>
 </body>
 
