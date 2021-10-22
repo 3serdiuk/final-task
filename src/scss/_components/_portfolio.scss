@@ -1,0 +1,112 @@
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 40px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    &__title {
+        font-weight: 800;
+        font-size: 32px;
+        line-height: 102%;
+        color: $white;
+    }
+
+    &__more {
+        display: flex;
+        @media (min-width: 750px) {
+            align-items: flex-end;
+        }
+        align-items: flex-start;
+        justify-content: flex-end;
+        a {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 152%;
+            color: #59a8fd;
+            text-transform: uppercase;
+            position: relative;
+            padding-right: 60px;
+            &:hover {
+                text-decoration: underline;
+                opacity: 0.8;
+            }
+            &::after {
+                @media (min-width: 740px) {
+                    content: "";
+                    position: absolute;
+                    background-image: url(../../images/portfolio-arrow.svg);
+                    background-repeat: no-repeat;
+                    width: 38px;
+                    height: 15px;
+                    right: 13px;
+                    top: 6px;
+                    transition: 0.3s;
+                }
+            }
+            &:hover::after {
+                right: 5px;
+            }
+        }
+    }
+}
+
+.portfolio__title {
+    grid-area: 1/1/2/3;
+}
+.div2 {
+    grid-area: 2/3/3/1;
+}
+.div3 {
+    grid-area: 3/1/4/3;
+}
+.div4 {
+    grid-area: 4/1/4/3;
+}
+.div5 {
+    grid-area: 6/1/5/3;
+}
+.div6 {
+    grid-area: 6/1/6/3;
+}
+.div7 {
+    grid-area: 7/1/7/3;
+}
+.portfolio__more {
+    grid-area: 8/0/8/3;
+}
+
+@media (min-width: 750px) {
+    .portfolio__title {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .div2 {
+        grid-area: 1 / 2 / 4 / 3;
+    }
+    .div3 {
+        grid-area: 2 / 1 / 5 / 2;
+    }
+    .div4 {
+        grid-area: 4 / 2 / 7 / 3;
+    }
+    .div5 {
+        grid-area: 5 / 1 / 8 / 2;
+    }
+    .div6 {
+        grid-area: 7 / 2 / 10 / 3;
+    }
+    .div7 {
+        grid-area: 8 / 1 / 11 / 2;
+    }
+    .portfolio__more {
+        grid-area: 10 / 2 / 11 / 3;
+    }
+
+    div:not(:first-of-type, :last-of-type) {
+        font-size: 0;
+        img {
+            width: 100%;
+        }
+    }
+}
